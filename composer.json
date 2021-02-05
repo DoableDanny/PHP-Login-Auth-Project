@@ -1,0 +1,11 @@
+{
+  "name": "dan/php_login_auth",
+  "authors": [
+    {
+      "name": "Dan"
+    }
+  ],
+  "require": {
+    "vlucas/phpdotenv": "^5.3"
+  }
+}
