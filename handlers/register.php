@@ -35,14 +35,21 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $newUser->email = $email;
     $newUser->read_single();
 
-    echo print_r($newUser);
-    
+
     if(isset($newUser->name)) {
       array_push($errors, ['msg' => 'That email is already registered']);
+      
       $_SESSION['errors'] = $errors;
     } else {
+        // No errors up to here so create new user account
+        $hashed_password = password_hash($password, PASSWORD_BCRYPT);
+        
+        $newUser->name = $name;
+        $newUser->password = $hashed_password;
+
         if($newUser->create()) {
           $_SESSION['success_msg'] = 'Your account is now registered. You can now log in';
+          
           header('location: login.php');
         }
     }
