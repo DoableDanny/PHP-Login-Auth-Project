@@ -1,18 +1,18 @@
-<?php include('./handlers/register.php'); ?>
-
-<?php include('./includes/header.php') ?>
-
 <?php
+include('./handlers/register.php');
+
 // Get session variables
-// if(isset($_SESSION['errors'])) {
-//   $errors = $_SESSION['errors'];
-//   unset($_SESSION['errors']);
-// }
+if(isset($_SESSION['errors'])) {
+  $errors = $_SESSION['errors'];
+  unset($_SESSION['errors']);
+}
 
 $errors = $errors ?? "";
 $name = $name ?? "";
 $email = $email ?? "";
 ?>
+
+<?php include('./includes/header.php') ?>
 
 <div class="row mt-5">
   <div class="col-md-6 m-auto">
