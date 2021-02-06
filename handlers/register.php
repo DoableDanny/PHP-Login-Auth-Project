@@ -39,7 +39,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     if(isset($newUser->name)) {
       array_push($errors, ['msg' => 'That email is already registered']);
       
-      $_SESSION['errors'] = $errors;
+      // $_SESSION['errors'] = $errors;
     } else {
         // No errors up to here so create new user account
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);

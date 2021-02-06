@@ -18,7 +18,7 @@ if(isset($_SESSION['success_msg'])) {
       <div class="alert alert-success"><?php echo $success_msg; ?></div>
       <?php endif; ?>
 
-      <form action="/users/login" method="POST">
+      <form action="login.php" method="POST">
         <div class="form-group">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" />
