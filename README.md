@@ -1,12 +1,15 @@
 # PHP Login Auth Project
 
 Sign up:
+
 ![register form](assets/register-screenshot.PNG)
 
 Log in:
+
 ![log in form](assets/login-screenshot.PNG)
 
 Access protected route:
+
 ![protected route](assets/dashboard-screenshot.PNG)
 
 To use this project:
